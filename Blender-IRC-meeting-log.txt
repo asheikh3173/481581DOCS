@@ -1,0 +1,33 @@
+		cmbasnett @cmbasnett  01:51 Is there an example of an RNA property definition that is just a set of strings? (not from a pre-selected list of enums) All of the `‪PROP_COLLECTION‬` property definitions seem to point to other RNA types. 
+		  Antonioya @antonioya  01:58 cmbasnett not sure if this is what you are looking for, but maybe help.. look for `‪ED_gpencil_layers_enum_itemf(‬` 
+		 this is a function that fills a list of items in an enum 
+		 you have several functions doing the same in the same source file 
+		 you can look at `‪ED_gpencil_material_enum_itemf‬` also 
+		  cmbasnett @cmbasnett  02:01 Yea this looks like it's still basically using an enum type under the hood as the collection item type 
+		 It's just populating the enum dynamically 
+		  cmbasnett @cmbasnett  02:15 What I want to do is linked to this RCS: blender.community/c/rightclickselect/XGdbbc/ Basically I want to just provide a list of valid file extensions 
+		  I suppose as a workaround I could just use a function that returns a set 
+		  Antonioya @antonioya  02:20 if you want populate dinamically a list, these functions do that..you can use as example 
+		  cmbasnett @cmbasnett  02:21 I'm not trying to do that though, I'm wanting to to let a Python addon creator to supply a set of arbitrary strings 
+		  nacioss @nacioss  03:54 is there a "documentation" chat module here? 
+		  ThomasDinges @ThomasDinges  03:55 There is a #docs channel 
+		👍 1
+		  PratikPB2125 @PratikPB2125  05:21 ThomasDinges hi, found a task spammer. Can you disable the account- developer.blender.org/p/Joeroot10/ 
+		  Mohammed-Mohsin-Ahmed @Mohammed-Mohsin-Ahmed  05:33 Hello everyone, I'm just introducing myself as someone who wants to contribute to blender. I am have little experience using blender so now that I've finished building it, I'm starting out by playing around with the software itself and watching Dalai Felinto's bug fix video listed in 'New Developer Resources'. Just want to know if you think this is a good place to start? 
+		  Harleya @Harleya  08:59 The blender codebase is huge, so where you work should be something you are passionate about and have something to contribute. Look in the Modules list to see if specific areas or topics excite you. Check devtalk, check the right-click Select site for ideas. If nothing jumps out at you then consider ways that Blender could work better with other people that share attributes with you, like language or region. Find a little corner of the code and explore it. 
+		  Mohammed-Mohsin-Ahmed @Mohammed-Mohsin-Ahmed  09:04 Thanks for the advice, I've worked through a book on raytracing and rasterization so im focusing on the rendering module to see if I can apply my knowledge there 
+		  cmbasnett @cmbasnett  17:48 Is there some sort of explanation as to what the "refine" method actually does (`‪RNA_def_struct_refine_func‬`) want to know if I need to implement this for a new RNA type or not. 
+		  cmbasnett @cmbasnett  18:25 Or I guess more generally, is there any sort of comprehensive explanation of the RNA system of any kind? I'm just fumbling around at this point lol 
+		  ChengduLittleA @ChengduLittleA  19:11    Clipboard - 2022年2月27日上午11点11分.png (116.91 kB)   
+		 
+		  ChengduLittleA @ChengduLittleA  19:11 😞 anyone know if these can be deleted? 
+		 bunch of elf's 
+		  ChengduLittleA @ChengduLittleA  19:29 After a bit digging I found it might be the cache for `‪perf‬`... 
+		  LazyDodo @LazyDodo  19:31 anything in the bin folder you can safely delete, if a file is needed, `‪make install‬` will put it back, i delete mine on a regular basis 
+		  ChengduLittleA @ChengduLittleA  19:36 Oh ok! Thanks! 
+		  Raimund58 @Raimund58  03:32 ThomasDinges Spam: developer.blender.org/p/Joeroot10/ 
+		  ThomasDinges @ThomasDinges  04:49 PratikPB2125 Raimund58 Removed. 🙂 
+		👍 2
+		  PrototypeNM1 @PrototypeNM1  17:21  LazyDodo - chbug was hoping to get wiki account to clean up typos. Who should they reach out to? 
+		  LazyDodo @LazyDodo  17:56 PrototypeNM1 i have to admit, i'm unsure what the account situation is for the wiki, i thought it was just people with commit rights, normally i'd defer to dalai, but he's gone for another week, i'd wait for him still, if there's a rush run it by Brecht Van Lommel he has admin on the wiki 
+		  chbug @chbug  21:05 No rush, thanks for the info! 
